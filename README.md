@@ -46,7 +46,7 @@ Managing Git operations through repetitive clicks in CyberPanel can slow down de
 | Push | `Ctrl + Alt + U` | `a[ng-click="gitPush()"]` | Clicks Push button and increments push counter |
 
 ## Configuration
-Edit `/tmp/workspace/BOSS294/cyberpanel-git-hotkeys/config.json`:
+Edit `config.json`:
 
 ```json
 {
@@ -119,7 +119,7 @@ Edit `/tmp/workspace/BOSS294/cyberpanel-git-hotkeys/config.json`:
 ## Install and use
 1. Open Chrome and go to `chrome://extensions`.
 2. Enable **Developer mode**.
-3. Click **Load unpacked** and select `/tmp/workspace/BOSS294/cyberpanel-git-hotkeys`.
+3. Click **Load unpacked** and select this repository folder.
 4. Update `config.json` with your CyberPanel URLs.
 5. Open a supported CyberPanel Git page and use the hotkeys.
 
