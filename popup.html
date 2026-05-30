@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberPanel Git Hotkeys</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+
+        <div class="brand-copy">
+          <h1>CyberPanel Git Hotkeys</h1>
+          <p>Fast Pull and Push with live status and counters.</p>
+        </div>
+      </div>
+      <div class="chip" id="statusChip" data-state="loading">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="chip-text" id="statusText">Loading...</span>
+      </div>
+    </header>
+
+    <section class="card sites">
+      <div class="card-head">
+        <h2>Active sites</h2>
+        <span class="caption">Edit config.json</span>
+      </div>
+      <div class="site-list" id="siteList"></div>
+    </section>
+
+    <section class="grid">
+      <article class="card keycard pull">
+        <div class="key-head">
+          <h2>Pull</h2>
+          <span class="badge">Sync</span>
+        </div>
+        <div class="hotkey">
+          <kbd>Ctrl</kbd>
+          <span class="plus">+</span>
+          <kbd>Alt</kbd>
+          <span class="plus">+</span>
+          <kbd>P</kbd>
+        </div>
+        <div class="meta">Action button: <code>a[ng-click="gitPull()"]</code></div>
+        <div class="count" id="pullCount">0</div>
+        <div class="label">times triggered</div>
+      </article>
+      <article class="card keycard push">
+        <div class="key-head">
+          <h2>Push</h2>
+          <span class="badge">Deploy</span>
+        </div>
+        <div class="hotkey">
+          <kbd>Ctrl</kbd>
+          <span class="plus">+</span>
+          <kbd>Alt</kbd>
+          <span class="plus">+</span>
+          <kbd>U</kbd>
+        </div>
+        <div class="meta">Action button: <code>a[ng-click="gitPush()"]</code></div>
+        <div class="count" id="pushCount">0</div>
+        <div class="label">times triggered</div>
+      </article>
+    </section>
+
+    <section class="card controls">
+      <div class="card-head">
+        <h2>Notifications</h2>
+        <span class="caption" id="notificationsState">On</span>
+      </div>
+      <div class="toggle-row">
+        <div class="toggle-copy">
+          <div class="toggle-title">CyberPanel open alert</div>
+          <div class="toggle-sub">Show a system notification when a supported panel loads.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="notificationsToggle" aria-label="Toggle notifications" />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="notice-preview">
+        <div class="preview-label">Preview</div>
+        <div class="preview-title">CyberPanel ready</div>
+        <div class="preview-text">Hotkeys loaded for Pull and Push on cp.coderresources.icu:8090.</div>
+      </div>
+      <div class="row buttons">
+        <button id="refreshBtn" class="btn secondary">Refresh status</button>
+        <button id="resetBtn" class="btn danger">Reset counters</button>
+      </div>
+      <p class="hint">Shortcuts work only while one of the two CyberPanel pages is open and focused.</p>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
